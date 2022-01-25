@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 17:58:38 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/25 18:07:43 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 18:27:36 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ DiamondTrap::~DiamondTrap(void)
 	std::cout << "DiamondTrap destructor called" << "\n";
 }
 
-void	DiamondTrap::attack(std::string& target)
+void	DiamondTrap::attack(const std::string& target)
 {
 	std::cout << "DiamondTrap attack called" << "\n";
 	this->ScavTrap::attack(target);
@@ -46,7 +46,7 @@ void	DiamondTrap::attack(std::string& target)
 
 void	DiamondTrap::whoAmI(void)
 {
-	std::cout << this->name << ": ";
-	std::cout << "My ClapTrap name is" << " ";
-	std::cout << this->ClapTrap::name << "\n";
+	std::cout << this->ClapTrap::name << ": ";
+	std::cout << "My real name is" << " ";
+	std::cout << this->name << "\n";
 }

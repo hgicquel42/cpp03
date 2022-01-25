@@ -6,16 +6,17 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 15:47:43 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/25 17:06:52 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 18:24:24 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 #include "ScavTrap.hpp"
 
 int	main(void)
 {
-	FragTrap	victor("Victor");
+	DiamondTrap	victor("Victor");
 	ScavTrap	bryce("Bryce");
 
 	victor.attack("Bryce");
@@ -30,4 +31,5 @@ int	main(void)
 	victor.attack("Bryce");
 	bryce.takeDamage(17);
 	victor.highFivesGuys();
+	victor.whoAmI();
 }

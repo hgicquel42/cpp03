@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 17:09:21 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/25 18:05:22 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 18:26:38 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ class DiamondTrap: public ScavTrap, public FragTrap
 		DiamondTrap(std::string name);
 		DiamondTrap(const DiamondTrap& from);
 		~DiamondTrap(void);
-		void	attack(std::string& name);
+		void	attack(const std::string& name);
 		void	whoAmI(void);
 };
