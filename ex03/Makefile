@@ -12,10 +12,10 @@ OUTPUT = ${INPUT:.cpp=.o}
 all: ${NAME}
 
 %.o: %.cpp
-	c++ -Wall -Wextra -Werror -std=c++98 -g -c $< -o $@
+	c++ -Wall -Wextra -Werror -std=c++98 -Wshadow -g -c $< -o $@
 
 ${NAME}: ${OUTPUT}
-	c++ -Wall -Wextra -Werror -std=c++98 -g ${OUTPUT} -o ${NAME}
+	c++ -Wall -Wextra -Werror -std=c++98 -Wshadow -g ${OUTPUT} -o ${NAME}
 
 clean:
 	rm -f ${OUTPUT}
