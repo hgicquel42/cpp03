@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 17:01:55 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/25 17:06:27 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/28 11:31:04 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,32 @@ FragTrap::FragTrap(const FragTrap& from):
 FragTrap::~FragTrap(void)
 {
 	std::cout << "FragTrap destructor called" << "\n";
+}
+
+void	FragTrap::attack(const std::string& target)
+{
+	if (this->hitPoints <= 0)
+	{
+		std::cout << "FragTrap" << " ";
+		std::cout << this->name << " ";
+		std::cout << "is dead" << "\n";
+		return ;
+	}
+	if (this->energyPoints <= 0)
+	{
+		std::cout << "FragTrap" << " ";
+		std::cout << this->name << " ";
+		std::cout << "is tired" << "\n";
+		return ;
+	}
+	this->energyPoints -= 1;
+	std::cout << "FragTrap" << " ";
+	std::cout << this->name << " ";
+	std::cout << "attacks" << " ";
+	std::cout << target << ", ";
+	std::cout << "causing" << " ";
+	std::cout << this->attackDamage << " ";
+	std::cout << "points of damage" << "\n";
 }
 
 void	FragTrap::highFivesGuys(void)

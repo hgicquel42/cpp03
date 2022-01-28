@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 17:00:41 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/25 18:01:22 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/28 11:36:17 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ class FragTrap: virtual public ClapTrap
 		FragTrap(std::string name);
 		FragTrap(const FragTrap& from);
 		~FragTrap(void);
+		void	attack(const std::string& target);
 		void	highFivesGuys(void);
 };
